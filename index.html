@@ -3,96 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhostofNightCity | Second Chance</title>
+    <title>GhostofNightCity | Cyberpunk 2077 Fanfic Author</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-cyan: #00ffff;
+            --dark-bg: #0a0a0a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            margin: 0;
-            padding: 0;
-            background: #0a0a0a;
-            color: #00ff9d;
+            background: linear-gradient(180deg, #0a0a0a, #1a0033);
+            color: #00ffff;
             font-family: 'VT323', monospace;
             line-height: 1.6;
-            background-image: linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
+            overflow-x: hidden;
         }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            border: 2px solid #00ff9d;
-            box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                rgba(255,255,255,0.03) 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 9999;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100px; }
+        }
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            border-bottom: 4px solid var(--neon-pink);
+            box-shadow: 0 0 30px var(--neon-pink);
         }
         h1 {
-            color: #ff00aa;
-            text-align: center;
-            font-size: 3.5em;
-            text-shadow: 0 0 10px #ff00aa;
-            margin-bottom: 10px;
+            font-size: 4.5rem;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px var(--neon-cyan),
+                        0 0 40px var(--neon-pink);
+            letter-spacing: 8px;
         }
         .subtitle {
-            text-align: center;
-            color: #00ccff;
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--neon-pink);
+            margin-top: 1rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
         .bio {
-            font-size: 1.4em;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
+            background: rgba(10, 10, 10, 0.85);
+            border: 3px solid var(--neon-cyan);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 0 25px var(--neon-cyan);
         }
-        a {
-            color: #00ccff;
-            text-decoration: none;
+        .stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
-        a:hover {
-            color: #ff00aa;
-            text-decoration: underline;
-        }
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        .button {
+        .card {
             background: #111;
-            border: 2px solid #00ff9d;
-            padding: 15px 30px;
-            font-size: 1.5em;
+            border: 3px solid var(--neon-pink);
+            padding: 1.5rem;
             transition: all 0.3s;
         }
-        .button:hover {
-            background: #00ff9d;
-            color: #000;
-            transform: scale(1.05);
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px var(--neon-pink);
+        }
+        a {
+            color: var(--neon-cyan);
+            text-decoration: none;
+        }
+        a:hover { color: var(--neon-pink); }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            border-top: 3px solid var(--neon-pink);
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="scanlines"></div>
+    
+    <header>
         <h1>GHOSTOFNIGHTCITY</h1>
-        <p class="subtitle">Cyberpunk 2077: Second Chance</p>
-        
-        <p class="bio">
-            Night City never gives second chances.<br>
-            But sometimes... you take one anyway.<br><br>
-            Writer of gritty, grounded Cyberpunk 2077 fanfiction.<br>
-            Lower-tier merc life. Trauma. Healing. Building something real in the City of Night.<br>
-        </p>
+        <p class="subtitle">CYBERPUNK 2077 • SECOND CHANCE / SECOND WIND</p>
+        <p style="margin-top: 1rem; font-size: 1.4rem;">Night City never sleeps. Neither do I.</p>
+    </header>
 
-        <div class="links">
-            <a href="https://www.royalroad.com/fiction/150237/cyberpunk-2077-secondchance" target="_blank" class="button">📖 Read on Royal Road</a>
-            <a href="https://github.com/GhostofNightCity/second-chance-chapter-index" target="_blank" class="button">📋 Full Chapter Index</a>
+    <div class="container">
+        <div class="bio">
+            <h2 style="color: #ff00ff; margin-bottom: 1rem;">ABOUT THE AUTHOR</h2>
+            <p>Hi, choom. I'm GhostofNightCity — just a guy writing slice-of-life stories in the best damn dystopia ever made.</p>
+            <p>Second Chance follows Will Scrap, a burned-out ex-cop trying to build something real in Kabuki while Night City tries its best to drag him back down.</p>
+            <p>Expect gritty action, found family, trauma healing, and a lot of noodles.</p>
         </div>
 
-        <p style="text-align: center; margin-top: 50px; opacity: 0.7;">
-            Book 1: SECOND_CHANCE — Complete<br>
-            Book 2: SECOND_WIND — Ongoing
-        </p>
+        <h2 style="color: #ff00ff; text-align: center; margin-bottom: 2rem;">CURRENT STORIES</h2>
+        <div class="stories">
+            <div class="card">
+                <h3>Book 1: SECOND CHANCE</h3>
+                <p>Will hits rock bottom and starts climbing back up. Gigs, clinic work, and learning how to live again.</p>
+                <a href="https://www.royalroad.com/fiction/150237/cyberpunk-2077-secondchance" target="_blank">→ Read on Royal Road</a>
+            </div>
+            <div class="card">
+                <h3>Book 2: SECOND WIND</h3>
+                <p>Will builds a life, a clinic, and a crew. New friends, new dangers, and real healing in Night City.</p>
+                <a href="https://www.royalroad.com/fiction/150237/cyberpunk-2077-secondchance" target="_blank">→ Read on Royal Road</a>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; text-align: center;">
+            <a href="https://github.com/GhostofNightCity/second-chance-chapter-index" style="font-size: 1.6rem; padding: 1rem 2rem; background: #111; border: 3px solid #00ffff; display: inline-block;">
+                📖 FULL CHAPTER INDEX
+            </a>
+        </div>
     </div>
+
+    <footer>
+        <p>Made with neon and bad decisions in Night City • 2077</p>
+        <p style="margin-top: 1rem; font-size: 1rem;">Hosted on GitHub Pages • GhostofNightCity</p>
+    </footer>
 </body>
 </html>
