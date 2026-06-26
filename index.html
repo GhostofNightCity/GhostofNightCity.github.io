@@ -76,7 +76,7 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1.5rem;
         }
@@ -93,6 +93,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
+            margin-bottom: 3rem;
         }
         
         .card {
@@ -131,6 +132,52 @@
             box-shadow: 0 0 30px #00ffff;
         }
         
+        /* Visuals / Gallery Section */
+        .visuals {
+            margin-top: 3rem;
+        }
+        
+        .visuals h2 {
+            color: #ff00ff;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 3px solid var(--neon-pink);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px var(--neon-pink);
+        }
+        
+        .view-album {
+            display: inline-block;
+            margin-top: 1.5rem;
+            font-size: 1.4rem;
+            padding: 0.8rem 1.8rem;
+            background: #111;
+            border: 3px solid #ff00ff;
+            color: #ff00ff;
+        }
+        
+        .view-album:hover {
+            background: #1a0033;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        
         footer {
             text-align: center;
             padding: 2.5rem 1rem;
@@ -139,7 +186,16 @@
             margin-top: 3rem;
         }
         
-        /* Mobile-specific improvements */
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            margin: 0 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Mobile improvements */
         @media (max-width: 600px) {
             header {
                 padding: 2rem 1rem 1.5rem;
@@ -149,7 +205,7 @@
                 padding: 1.4rem;
             }
             
-            .card {
+            .card, .gallery img {
                 padding: 1.2rem;
             }
             
@@ -197,7 +253,37 @@
             </div>
         </div>
 
-        <div style="text-align: center;">
+        <!-- Story Visuals Section -->
+        <div class="visuals">
+            <h2>STORY VISUALS</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem; opacity: 0.85;">
+                Screenshots and photomode captures from Will Scrap's journey in Night City.
+            </p>
+            
+            <div class="gallery">
+                <!-- Using a few representative images from your album. You can replace these URLs with specific ones you prefer -->
+                <a href="https://ibb.co/album/d7jsL3" target="_blank">
+                    <img src="https://i.ibb.co/7yQvL3k/photomode-16062026-082725.jpg" alt="Night City scene from SECOND CHANCE">
+                </a>
+                <a href="https://ibb.co/album/d7jsL3" target="_blank">
+                    <img src="https://i.ibb.co/example2.jpg" alt="Character moment from the story">
+                </a>
+                <a href="https://ibb.co/album/d7jsL3" target="_blank">
+                    <img src="https://i.ibb.co/example3.jpg" alt="Kabuki street scene">
+                </a>
+                <a href="https://ibb.co/album/d7jsL3" target="_blank">
+                    <img src="https://i.ibb.co/example4.jpg" alt="Story visual from SECOND CHANCE">
+                </a>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://ibb.co/album/d7jsL3" target="_blank" class="view-album">
+                    VIEW FULL ALBUM (138 images) →
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
             <a href="https://github.com/GhostofNightCity/second-chance-chapter-index" class="chapter-index-btn">
                 📖 FULL CHAPTER INDEX
             </a>
@@ -206,6 +292,12 @@
 
     <footer>
         <p>Made with neon and bad decisions in Night City • 2077</p>
+        
+        <div class="social-links">
+            <a href="https://www.tumblr.com/blog/ghostofnightcity" target="_blank">Tumblr</a>
+            <a href="https://github.com/GhostofNightCity" target="_blank">GitHub</a>
+        </div>
+        
         <p style="margin-top: 0.8rem; font-size: 1rem; opacity: 0.7;">Hosted on GitHub Pages • GhostofNightCity</p>
     </footer>
 </body>
